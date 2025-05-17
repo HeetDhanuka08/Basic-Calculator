@@ -2,73 +2,111 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Times New Roman, serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    margin-left: 9%;
-    width: 80%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #f68585, #b174ef); 
+    background: #1a1a1a;
 }
 
 .calculator {
-    border: 5px solid #452366; 
+    background: #2d2d2d;
     border-radius: 20px;
-    padding: 20px;
-    background: linear-gradient(35deg , #be86f6, #f5996b); 
-    box-shadow: 25px 25px 25px  rgb(0, 0, 0, 0.7);
+    padding: 25px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    width: 500px;
+    border: 1px solid #3d3d3d;
+}
+
+.display {
+    margin-bottom: 25px;
 }
 
 input {
-    width: 400px;
-    border: 3px solid #452366; 
+    width: 100%;
+    border: none;
+    background: #1a1a1a;
     padding: 20px;
-    margin: 10px;
-    box-shadow: 0px 5px 25px rgb(41, 31, 10); 
-    text-align:right ;
-    font-size: 30px;
-    color: #0a0112; 
+    border-radius: 15px;
+    text-align: right;
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
-input::placeholder {
-    color: #0a0112; 
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #4a4a4a;
+}
+
+.buttons {
+    display: grid;
+    gap: 12px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
 }
 
 button {
-    border: 3px solid #452366; 
-    width: 80px;
-    height: 80px;
-    margin: 10px;
-    border-radius: 30%;
-    font-size: 30px;
-    background-color: #c9a9ea; 
-    color: #06000a; 
-    cursor:grab ;
-    box-shadow: 0px 5px 25px rgba(102, 51, 153, 0.7); 
+    border: none;
+    padding: 16px;
+    font-size: 1.2em;
+    border-radius: 15px;
+    background: #3d3d3d;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.clear-all {
-    background-color: #71469d;
-    color: #06000a; 
+button:hover {
+    background: #4a4a4a;
+    transform: translateY(-2px);
 }
 
-.delete {
-    background-color: #71469d;
-    color: #06000a; 
+button:active {
+    transform: translateY(0);
+    background: #555;
 }
 
 .operator {
-    background-color: #71469d;
-    color: #06000a; 
-    font-size: 30px;
+    background: #ff9500;
+    color: white;
+}
+
+.operator:hover {
+    background: #ffaa33;
 }
 
 .equal {
-    background-color: #452366;
-    color: #06000a; 
-    font-size: 30px;
+    background: #ff9500;
+    color: white;
 }
+
+.equal:hover {
+    background: #ffaa33;
+}
+
+.clear-all, .delete {
+    background: #ff3b30;
+    color: white;
+}
+
+.clear-all:hover, .delete:hover {
+    background: #ff5e52;
+}
+
+
